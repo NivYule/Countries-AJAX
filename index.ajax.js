@@ -4,6 +4,8 @@ function getCountriesFromServer() {
       url: "https://restcountries.eu/rest/v2/all",
     }).done(function (data) {
       resolve(data);
+    }).fail(()=>{
+        reject(err);
     });
   });
 }
